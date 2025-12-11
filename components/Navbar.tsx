@@ -39,10 +39,9 @@ const Navbar: React.FC<NavbarProps> = ({ lang, setLang, content, onNavClick }) =
           <div className="flex items-center cursor-pointer" onClick={() => handleNav('home')}>
             <div style={{ marginRight: 10 }}>
               <img
-                src='http://inborun.com/uploadfiles/fla/2022512162710.jpg'
+                src='https://image.qcc.com/logo/0df4436fa20fd1a6eae4150f5762cc08.jpg?x-oss-process=style/logo_200'
                 alt='logo'
-                width={68}
-                height={40}
+                style={{ width: 68, height: 60, objectFit: 'contain' }}
               />
             </div>
             <span className={`text-xl font-bold tracking-tight ${scrolled ? 'text-slate-900' : 'text-white'}`}>
