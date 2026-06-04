@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-html { scroll-behavior: smooth;font-size: 20px }
+html { scroll-behavior: smooth;font-size: 16px }
 body { font-family: 'Inter', sans-serif; }
 
 /* Custom Animations */
