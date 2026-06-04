@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Globe } from 'lucide-react';
+import { Menu, X, Globe, Cpu } from 'lucide-react';
 import { Language, NavContent } from '../types';
-
+const logo = new URL('../images/logo.jpg', import.meta.url).href;
 interface NavbarProps {
   lang: Language;
   setLang: (lang: Language) => void;
@@ -37,21 +37,19 @@ const Navbar: React.FC<NavbarProps> = ({ lang, setLang, content, onNavClick }) =
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center cursor-pointer" onClick={() => handleNav('home')}>
-            <div style={{ marginRight: 10 }}>
-              <img
-                src='https://image.qcc.com/logo/0df4436fa20fd1a6eae4150f5762cc08.jpg?x-oss-process=style/logo_200'
-                alt='logo'
-                style={{ width: 68, height: 60, objectFit: 'contain' }}
-              />
-            </div>
-            <span className={`text-xl font-bold tracking-tight ${scrolled ? 'text-slate-900' : 'text-white'}`}>
+            <img
+              src={logo}
+              alt="Engineering Lab"
+              style={{ height: '60px',width:'220px',marginRight:'10px' }}
+            />
+            <span className={`text-xl font-bold tracking-tight ${scrolled ? 'text-slate-900' : 'text-red-500'}`}>
               {content.logoMain} <span className="text-tech-500">{content.logoHighlight}</span>
             </span>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            {['home', 'about', 'solutions', 'partners', 'contact'].map((item) => (
+            {['home', 'about', 'solutions', 'products', 'contact'].map((item) => (
               <button
                 key={item}
                 onClick={() => handleNav(item)}
@@ -83,31 +81,33 @@ const Navbar: React.FC<NavbarProps> = ({ lang, setLang, content, onNavClick }) =
       </div>
 
       {/* Mobile Menu Overlay */}
-      {isOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-slate-100">
-          <div className="px-4 py-6 space-y-4 flex flex-col">
-            {['home', 'about', 'solutions', 'partners', 'contact'].map((item) => (
-              <button
-                key={item}
-                onClick={() => handleNav(item)}
-                className="text-left text-base font-medium text-slate-700 hover:text-tech-600 px-2 py-2 rounded-md hover:bg-slate-50"
-              >
-                {content[item as keyof NavContent]}
-              </button>
-            ))}
-            <div className="pt-4 border-t border-slate-100">
-              <button
-                onClick={toggleLang}
-                className="flex items-center space-x-2 text-slate-600 px-2 py-2"
-              >
-                <Globe size={18} />
-                <span>Switch to {lang === 'zh' ? 'English' : '中文'}</span>
-              </button>
+      {
+        isOpen && (
+          <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-slate-100">
+            <div className="px-4 py-6 space-y-4 flex flex-col">
+              {['home', 'about', 'solutions', 'products', 'contact'].map((item) => (
+                <button
+                  key={item}
+                  onClick={() => handleNav(item)}
+                  className="text-left text-base font-medium text-slate-700 hover:text-tech-600 px-2 py-2 rounded-md hover:bg-slate-50"
+                >
+                  {content[item as keyof NavContent]}
+                </button>
+              ))}
+              <div className="pt-4 border-t border-slate-100">
+                <button
+                  onClick={toggleLang}
+                  className="flex items-center space-x-2 text-slate-600 px-2 py-2"
+                >
+                  <Globe size={18} />
+                  <span>Switch to {lang === 'zh' ? 'English' : '中文'}</span>
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      )}
-    </nav>
+        )
+      }
+    </nav >
   );
 };
 

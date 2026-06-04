@@ -222,10 +222,11 @@ export const CONTENT: Record<Language, Content> = {
     nav: {
       logoMain: "英倍朗",
       logoHighlight: "科技",
+      logo: "../images/logo.png",
       home: "首页",
       about: "关于我们",
       solutions: "解决方案",
-      partners: "芯片代理",
+      products: "产品方案",
       contact: "联系方式"
     },
     hero: {
@@ -278,23 +279,216 @@ export const CONTENT: Record<Language, Content> = {
         }
       ]
     },
-    partners: {
-      title: "芯片代理品牌",
-      subtitle: "携手顶级半导体厂商，提供优质元器件供应",
+    products: {
+      title: "产品中心",
+      subtitle: "专注于中高端无刷直流电机驱动控制与智能控制核心方案",
+      viewDetailText: "查看方案详情",
+      keyFeaturesText: "核心特性",
+      techSpecsText: "技术规格",
+      typicalAppsText: "典型应用",
+      backButton: "返回产品列表",
       list: [
-        { name: "国民技术 (Nationstech)", imgUrl: "	https://www.nationstech.com/dist/images/logo2.png" },
-        { name: "永源微 (YONGERVIA)", imgUrl: "https://e-eway.oss-cn-shenzhen.aliyuncs.com/image/brand/587929381951902249.png" },
-        { name: "顾邦半导体 (Good-Ark)", imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC5YfapjNQJAccQMSYR_wfvG-Lls4LT7vjcA&s" },
-        { name: "三易精工 (SANYI)", imgUrl: "	https://img.36krcdn.com/20220810/v2_88300cc1966249df990b405f8371899c_img_000" },
-        { name: "黄宝石电容", imgUrl: "https://www.gdtopaz.com/img/b1.png" },
-        { name: "南芯半导体 (Southchip)", imgUrl: "https://www.zenitron.com.tw/dist/assets/media/img/logo.svg" },
-        { name: "森国科", imgUrl: "https://www.semiw.com/images/companyimg/72.png" },
-        { name: "明达微", imgUrl: "https://32343334.s21i.faiusr.com/4/ABUIABAEGAAg146YsQYoz5nIazC7AjiZAg.png" },
-        { name: "芯圣电子", imgUrl: "https://www.holychip.cn/Uploads/Temp/image/20230815/64dae81d53f26.png" },
-        { name: "美浦森半导体", imgUrl: "https://img.36krcdn.com/20221026/v2_b326f9dbd2cb4259916f6794ef63fd4b_img_000" },
-        { name: "奥伦德", imgUrl: "https://www.orient-opto.com/upload/sysconfigs/2022-09/6335335718c80.png" },
-        { name: "丽隽 PLP", imgUrl: "http://www.pipsemi.com/images/up_images/logo.png" },
-        // { name: "蓝宝 FUSE", imgUrl: "https://placehold.co/200x80/f1f5f9/94a3b8?text=Lanbao" }
+        {
+          id: "high-speed-hair-dryer",
+          name: "高速吹风筒驱动方案",
+          desc: "针对高转速吹风机、智能风叶量身定制，支持10万至12万转超高转速电机闭环控制，发热低、超静音、恒温出风精确控制。",
+          imgUrl: "https://oss.huangye88.net/live/ueditor/php/upload/3244789/image/20200623/1592873849864838.jpg?auto=format&fit=crop&w=600&q=80",
+          features: [
+            "闭环转速控制最高支持 120,000 RPM 稳定运行",
+            "正弦波矢量控制算法 (FOC)，电机本底运转音噪低于 55dB",
+            "加热丝闭合温控联动，智能出风恒温精度达 ±1°C",
+            "零延时超极速启动、停止刹车，防吸发防反转安全控制"
+          ],
+          specs: [
+            { label: "输入电压 (Voltage)", value: "AC 220V 50Hz (或直流 DC 310V)" },
+            { label: "额定功率 (Power)", value: "电机最大 150W (热电功率 1400W-1600W)" },
+            { label: "最高运行转速 (Max RPM)", value: "120,000 RPM (闭环矢量控制)" },
+            { label: "调速方式 (Speed)", value: "三档物理轻触调速 / 滑动无级调速" },
+            { label: "核心算法 (Algorithm)", value: "无传感器磁场定向控制 (Sensorless FOC)" },
+            { label: "安全防护 (Security)", value: "发热丝温控保护、缺相断开、过流过压保护" }
+          ],
+          applications: [
+            "家用高速吹风机",
+            "沙龙级高端电吹风",
+            "微型高速风轮净化器",
+            "手持大吸力高转速气泵"
+          ]
+        },
+        {
+          id: "vf-water-pump",
+          name: "变频水泵驱动方案",
+          desc: "广泛适配智能热水器、壁挂炉循环泵、无刷潜水泵及鱼缸循环泵。提供 IP68 级超高防护等级，轻静运行，带高灵敏防干烧智能化检测。",
+          imgUrl: "https://oss.huangye88.net/live/ueditor/php/upload/3244789/image/20200706/1594031773854228.jpg?auto=format&fit=crop&w=600&q=80",
+          features: [
+            "无传感器正弦波静音驱动，全频运行噪声低于 30dB",
+            "高灵敏干烧检测专利算法，无水自动停机，隔段自启唤醒",
+            "全方位防反接、欠压过电、电机堵转双向自恢复设计",
+            "支持 PWM / 0-10V / 智能串行总线等多种调速信令"
+          ],
+          specs: [
+            { label: "输入电压 (Voltage)", value: "DC 12V / 24V / 48V 或交流 AC 220V" },
+            { label: "额定功率 (Power)", value: "3W - 120W (定宽无极调压自适应)" },
+            { label: "防护等级 (IP Code)", value: "IP68 (一体成型灌封极防水设计)" },
+            { label: "静承扬程 (Lift Head)", value: "1.5米 - 9.0米 / 恒压流量反馈" },
+            { label: "运行能级 (Efficiency)", value: "电机系统最高效能超 85%" }
+          ],
+          applications: [
+            "家用壁挂炉变频水泵",
+            "智能恒温热水器增压循环泵",
+            "大型水族箱防堵微型静音泵",
+            "新能源电池循环液冷泵"
+          ]
+        },
+        {
+          id: "industrial-fan",
+          name: "工业风机驱动方案",
+          desc: "专为大功率工业排风扇、厂房新风换气系统打造，支持高压无感、高额抗逆风起动能力，RS485集中调控，安全防护极其过硬。",
+          imgUrl: "https://cos3.solepic.com/20200710/b_5483152202007101419181350.jpg",
+          features: [
+            "超强瞬时逆风定位启动，防逆转强力吹阻安全起转",
+            "有源功率因数校正级 (APFC)，功率因数 PF > 0.98，谐波极低",
+            "标配工业级双路隔离 RS485 (Modbus-RTU) 现场集控总线",
+            "超长长寿命双向重载防烧板、智能自适应过流闭环截断"
+          ],
+          specs: [
+            { label: "输入电压 (Voltage)", value: "AC 85V - 265V 50/60Hz (宽网压设计)" },
+            { label: "额定输出功率 (Rated Power)", value: "500W - 1500W (强力宽域平滑响应)" },
+            { label: "磁场定向频率 (Frequency)", value: "20KHz 载波，极耳超静音高压逆变" },
+            { label: "驱动效率 (Eff.)", value: "满载驱动效率大于 92%" },
+            { label: "通信控制 (Control)", value: "RS485、0-10V模拟、PWM占空比、CAN 2.0 (可选)" }
+          ],
+          applications: [
+            "仓储、厂房超大型通风机/风机",
+            "现代化牧场/大棚新风循环系统",
+            "大型冷却塔热交换机排风驱动",
+            "工业管道及重型抽风设备"
+          ]
+        },
+        {
+          id: "duct-fan",
+          name: "管道风机驱动方案",
+          desc: "适用于商用与家用高效率新风管道机、斜流风箱。能效比突出，契合低振动，支持风道静压回风与气流量闭环恒定。",
+          imgUrl: "https://t11.baidu.com/it/u=1467752200,4029324511&fm=199&app=68&f=JPEG?w=750&h=644&s=013879924A957BED3890D856030040E1?auto=format&fit=crop&w=600&q=80",
+          features: [
+            "闭环恒风量(Constant CFM)控制系统，管阻增加自加电压补偿",
+            "超微振动正弦波控制，电机运转噪音降低 65%",
+            "支持对接 PM2.5 / 湿度 / CO2 传感器进行多重自动关联调速",
+            "超小超薄单层 PCB 架构，便捷装配于风盘或管道壳体"
+          ],
+          specs: [
+            { label: "输入电压 (Voltage)", value: "AC 110V / 220V 50Hz" },
+            { label: "额定功率 (Power)", value: "30W - 250W" },
+            { label: "风量控制精度 (Accuracy)", value: "目标流速控制差额 < 3%" },
+            { label: "运行环温 (Tamb)", value: "-25°C 至 +60°C (耐低温防潮运行)" },
+            { label: "安全证书 (Safety)", value: "契合 CCC 强制认证与 Class B 家电电磁兼容" }
+          ],
+          applications: [
+            "新风机组分户式管道净化风机",
+            "酒店/写字楼盘管末端斜流风机",
+            "智能超静音厨房换气机",
+            "高层住宅防回流管道排风扇"
+          ]
+        },
+        {
+          id: "handheld-vacuum",
+          name: "手持吸尘器驱动方案",
+          desc: "专为手持高端锂电池无负载超高速吸尘风机研发，毫秒级骤速响应启动，极致效率设计，大幅拓宽整机无线续航里程。",
+          imgUrl: "https://aisearch.cdn.bcebos.com/fileManager/ORzw3plTFO3Ebl9Z-jcgag/1780559100827ZuuLSm.png?authorization=bce-auth-v1%2F7e22d8caf5af46cc9310f1e3021709f3%2F2026-06-04T07%3A45%3A04Z%2F86400%2Fhost%2Faae4e99602e03d8dbb25c882bcccd7fbfd8f09f5fe6f7c00aef085a650144081?auto=format&fit=crop&w=600&q=80",
+          features: [
+            "0.2秒极瞬时平稳启动运转（100,000 RPM满速响应）",
+            "极宽广功率自适应切档，轻量化智能过载恒扭矩拉阻",
+            "超宽直流直流段调压供能技术，单板全合一极精简元器件占位",
+            "极小单板空间高功率密度，完美融入电池枪握把内部"
+          ],
+          specs: [
+            { label: "输入电压 (Voltage)", value: "DC 12V - 30V (3S - 8S锂电池组直供)" },
+            { label: "额定功率 (Power)", value: "100W - 350W (大吸力无感高效矢量)" },
+            { label: "最大调控转速 (Speed)", value: "最高 110,000 RPM (宽输出阻抗控制)" },
+            { label: "电机系统效率 (Eff.)", value: "满排最大系统能效比达 90%" },
+            { label: "温控防护 (Safety)", value: "单节电芯温控侦测、电流死锁硬关断" }
+          ],
+          applications: [
+            "便携式手持床单除螨仪",
+            "大吸力多功能无线手持吸尘器",
+            "车载紧凑级别微型强力吸尘器",
+            "高端手持吹折气动除尘吹风机"
+          ]
+        },
+        {
+          id: "robot-vacuum",
+          name: "扫地宝驱动方案",
+          desc: "集吸尘风扇、清扫滚刷、以及双向行走边轮驱动于一体。低速大扭力脱困脱卡算法让行进路线智控如常，拥有数十类家电可靠性测试标准。",
+          imgUrl: "https://img0.baidu.com/it/u=2139681693,4060028397&fm=253&app=138&f=JPEG?w=800&h=1066?auto=format&fit=crop&w=600&q=80",
+          features: [
+            "风机+双轮行走+主刷+边刷全直流无刷全系统整合配套方案",
+            "边行走轮系防卡退困，遇高毛毯、厚障碍电驱动大电流强转起步",
+            "微安级（< 15μA）极智待机低功耗，让电池存放损耗逼近于零",
+            "主板隔离带保护，大面积防水、抗污、防腐尘埃涂层特殊处理"
+          ],
+          specs: [
+            { label: "主供电电压 (Voltage)", value: "DC 14.4V - 16.8V (适配多阶电池包)" },
+            { label: "主机集成功耗 (Load)", value: "主吸风30W + 滚刷45W + 行走20W×2" },
+            { label: "控制总线与通信 (Comm.)", value: "全硬件 I2C / SPI 高速数字传感器联动" },
+            { label: "静态深待机 (Standby)", value: "≤ 12uA 极限长备用节电" },
+            { label: "运行温区 (Temp)", value: "-10°C 至 +55°C (适应家庭温差)" }
+          ],
+          applications: [
+            "全智能全自动家用扫地机器人",
+            "商用智能工厂搬运及高负荷扫拖机",
+            "手持多功能全自吸尘滚刷洗地机",
+            "安防特种全天候微履带巡逻小车"
+          ]
+        },
+        {
+          id: "air-purifier",
+          name: "空气净化器驱动方案",
+          desc: "打造极致静密居住体验。支持智能灰尘探头及气体颗粒浓度反馈环算法。配合低转差正弦波，完美融汇现代人居生活要求。",
+          imgUrl: "https://editerupload.eepw.com.cn/202211/1669778864367303.jpg?auto=format&fit=crop&w=600&q=80",
+          features: [
+            "25dB(A)极致睡眠微风控制，彻底隔离一切高频电流沙沙声",
+            "集滤网脏堵感知与电机负载电流反向预测自调补偿风压技术",
+            "零过渡超平缓转速调整，避免陡增转速带来的声场异噪感",
+            "支持一键整合智能红外及激光PM2.5数值监测模块"
+          ],
+          specs: [
+            { label: "输入电压 (Voltage)", value: "AC 100V - 240V 全球网压自适应" },
+            { label: "额定驱动功率 (Power)", value: "15W - 75W (极客超低能耗比)" },
+            { label: "风流效率 (Efficiency)", value: "风机效率最大提高 12%，耗电降低 20%" },
+            { label: "无级调速范围 (Speed Range)", value: "50 RPM - 2200 RPM 无阶梯调节" },
+            { label: "待机静态功耗 (Standby)", value: "< 0.3W 符合全球六级能效考核要求" }
+          ],
+          applications: [
+            "家用智能空气净化器",
+            "中大型新风净化机组及加湿一体机",
+            "卧室床头静密除甲醛智能小风扇",
+            "医疗隔离床舱空气内循环消毒箱"
+          ]
+        },
+        {
+          id: "server-fan",
+          name: "服务器风机驱动方案",
+          desc: "针对云端高精密度机房、高性能算力中心量身打造的冗余风扇驱动。超强散热、数字化敏捷遥测，多重热备份容灾控制保护。",
+          imgUrl: "https://gips0.baidu.com/it/u=3668750742,682842938&fm=3066&app=3066&f=JPEG?w=1478&h=1478?auto=format&fit=crop&w=600&q=80",
+          features: [
+            "支持系统在线带电热插拔 (Hot-Swap)，内置大感性冲击软限制",
+            "PMBus / I2C 数字通信接口，风机运行温度/时速故障实时上报",
+            "极冷启动保护与超平稳转速跟随阻尼，整批风机谐振微幅削弱",
+            "特选特硬军工级耐热板材，胜任 85°C 环温服务器满载持续运行"
+          ],
+          specs: [
+            { label: "输入电压 (Voltage)", value: "DC 12V 标配 (支持直流 DC 48V 超高压版)" },
+            { label: "最大功率 (Max Power)", value: "板载大电流承受可达 120W (如80*80型双扇)" },
+            { label: "通信标准 (Bus Standard)", value: "标准 I2C/SMBus/PMBus 智能物联调测" },
+            { label: "不间断测试 (MTTF)", value: "不低于 150,000 小时 (全天候连续不宕机)" },
+            { label: "测试规范 (Standard)", value: "轻松过美规 FCC、欧规 CE 重型工业干扰认证" }
+          ],
+          applications: [
+            "大型云算力数据中心 4U/2U 机架服务器散热",
+            "超级计算机高负荷整机热交换强排风扇",
+            "5G 宏基站室外防水耐热机壳热交换机",
+            "高端变频电源 and 专业电焊机高压冷风扇"
+          ]
+        }
       ]
     },
     contact: {
@@ -352,9 +546,10 @@ export const CONTENT: Record<Language, Content> = {
       logoMain: "INBORUN",
       logoHighlight: "TECH",
       home: "Home",
+      logo: "",
       about: "About Us",
       solutions: "Solutions",
-      partners: "Partners",
+      products: "Products",
       contact: "Contact"
     },
     hero: {
@@ -407,23 +602,216 @@ export const CONTENT: Record<Language, Content> = {
         }
       ]
     },
-    partners: {
-      title: "Authorized Distributor",
-      subtitle: "Partnering with top semiconductor manufacturers",
+    products: {
+      title: "Products",
+      subtitle: "Focusing on core solutions for BLDC brushless motor drive control and smart electronics systems.",
+      viewDetailText: "View Detail",
+      keyFeaturesText: "Key Features",
+      techSpecsText: "Technical Specs",
+      typicalAppsText: "Typical Applications",
+      backButton: "Back to Products",
       list: [
-        { name: "Nationstech", imgUrl: "https://placehold.co/200x80/f1f5f9/94a3b8?text=Nationstech" },
-        { name: "YONGERVIA", imgUrl: "https://placehold.co/200x80/f1f5f9/94a3b8?text=YONGERVIA" },
-        { name: "Good-Ark", imgUrl: "https://placehold.co/200x80/f1f5f9/94a3b8?text=Good-Ark" },
-        { name: "SANYI", imgUrl: "https://placehold.co/200x80/f1f5f9/94a3b8?text=SANYI" },
-        { name: "Huangbaoshi Caps", imgUrl: "https://placehold.co/200x80/f1f5f9/94a3b8?text=TOPAZ" },
-        { name: "Southchip", imgUrl: "https://placehold.co/200x80/f1f5f9/94a3b8?text=Southchip" },
-        { name: "SenGuoKe", imgUrl: "https://placehold.co/200x80/f1f5f9/94a3b8?text=SGK" },
-        { name: "Mingda Micro", imgUrl: "https://placehold.co/200x80/f1f5f9/94a3b8?text=MD" },
-        { name: "Xinsheng Electronics", imgUrl: "https://placehold.co/200x80/f1f5f9/94a3b8?text=Holychip" },
-        { name: "Maplesemi", imgUrl: "https://placehold.co/200x80/f1f5f9/94a3b8?text=Maplesemi" },
-        { name: "Aolunde", imgUrl: "https://placehold.co/200x80/f1f5f9/94a3b8?text=Orient" },
-        { name: "Lijuan PLP", imgUrl: "https://placehold.co/200x80/f1f5f9/94a3b8?text=Lijuan" },
-        { name: "Lanbao FUSE", imgUrl: "https://placehold.co/200x80/f1f5f9/94a3b8?text=Lanbao" }
+        {
+          id: "high-speed-hair-dryer",
+          name: "High-speed Hair Dryer Solution",
+          desc: "Tailored for high-speed hair dryers and smart hair blowers. Supports 100,000 to 120,000 RPM high-speed motor closed-loop vector control. Highly efficient, ultra-quiet, and smart temperature regulation.",
+          imgUrl: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80",
+          features: [
+            "Closed-loop speed control supporting stable operation up to 120,000 RPM",
+            "Sensorless Field-Oriented Control (FOC) algorithm, motor operating noise below 55dB",
+            "Smart temperature coupling constant control within ±1°C accuracy",
+            "Zero-latency ultra-fast start and stop brake mechanism with anti-hair-suction fail-safe"
+          ],
+          specs: [
+            { label: "Input Voltage", value: "AC 220V 50Hz (or DC 310V)" },
+            { label: "Rated Power", value: "Motor max 150W (Heating coil power 1400W-1600W)" },
+            { label: "Max Speed", value: "120,000 RPM (Closed-loop vector FOC)" },
+            { label: "Speed Control", value: "3-gear physical touch / continuous slider speed adjustment" },
+            { label: "Core Algorithm", value: "Sensorless FOC" },
+            { label: "Protective Measures", value: "Overheating detection, phase disconnection, overcurrent protection" }
+          ],
+          applications: [
+            "Household high-speed hair dryers",
+            "Salon-grade premium hair blowers",
+            "Miniature air purifiers with high-speed turbine",
+            "High-suction hand-pumps"
+          ]
+        },
+        {
+          id: "vf-water-pump",
+          name: "Variable Frequency Water Pump Solution",
+          desc: "Widely used in water heaters, wall-hung boilers, brushless diving pumps, and fish tank circulation systems. IP68 waterproof design, ultra-quiet, and high-sensitivity dry-run protection.",
+          imgUrl: "https://images.unsplash.com/photo-1615906655593-ad0386982a0f?auto=format&fit=crop&w=600&q=80",
+          features: [
+            "Sensorless sinewave quiet drive with operating noise below 30dB",
+            "Self-developed dry-run protection, auto-shutdown when empty, periodic wake-up trial",
+            "Comprehensive protection: anti-reverse, undervoltage, and automatic lock-rotor recovery",
+            "Supports PWM, 0-10V, and smart serial communication speed reference inputs"
+          ],
+          specs: [
+            { label: "Input Voltage", value: "DC 12V / 24V / 48V or AC 220V" },
+            { label: "Rated Power", value: "3W - 120W (Continuous adaptive regulation)" },
+            { label: "IP Rating", value: "IP68 (Waterproof encapsulation)" },
+            { label: "Static Lift Head", value: "1.5m - 9.0m with constant pressure feedback" },
+            { label: "Max Efficiency", value: "Total motor system efficiency > 85%" }
+          ],
+          applications: [
+            "Wall-hung boiler frequency-controlled circulation pumps",
+            "Smart water heater booster pumps",
+            "Ultra-quiet fish tank circulation units",
+            "New Energy electric vehicle liquid cooling pumps"
+          ]
+        },
+        {
+          id: "industrial-fan",
+          name: "Industrial Fan Drive Solution",
+          desc: "Optimized for heavy-duty industrial exhaust systems, warehouse ventilation, and smart greenhouse blowers. Strong anti-wind reversing start, RS485 network control, and robust hardware design.",
+          imgUrl: "https://images.unsplash.com/photo-1599740831618-2430030058b7?auto=format&fit=crop&w=600&q=80",
+          features: [
+            "Excellent wind resistance start, robust anti-reverse start, and instant rotor capture",
+            "Active Power Factor Correction (APFC), power factor PF > 0.98, extremely low grid harmonics",
+            "Equipped with standard isolated industrial-grade RS485 (Modbus-RTU) fieldbus",
+            "High reliability heavy-current board design, smart cycle-by-cycle overcurrent protection"
+          ],
+          specs: [
+            { label: "Input Voltage", value: "AC 85V - 265V 50/60Hz (Wide grid range)" },
+            { label: "Rated Output", value: "500W - 1500W (Continuous heavy duty load)" },
+            { label: "Carrier Frequency", value: "20KHz silent FOC high-voltage drive representation" },
+            { label: "Driver Efficiency", value: "Full-load driver efficiency exceeding 92%" },
+            { label: "Control Interfaces", value: "RS485, 0-10V analog, PWM, CAN 2.0 (Optional)" }
+          ],
+          applications: [
+            "Warehouse and workshop large ventilation blowers",
+            "Farmland and smart greenhouse fresh-air systems",
+            "Heavy exhaust systems in cooling towers",
+            "Industrial industrial duct air-extractors"
+          ]
+        },
+        {
+          id: "duct-fan",
+          name: "In-line Duct Fan Drive Solution",
+          desc: "Designed for commercial and residential high-efficiency HVAC duct fans. Outstanding energy ratio, smooth low-vibration sinewave vector algorithm, and constant airflow pressure tracking.",
+          imgUrl: "https://images.unsplash.com/photo-1605647540924-852290f6b0d5?auto=format&fit=crop&w=600&q=80",
+          features: [
+            "Constant Flow (CFM) control system, voltage auto-compensates for duct static resistance",
+            "Sinewave low-vibration vector drive reduces operating acoustic noise by 65%",
+            "Direct digital linkages to PM2.5, Humidity, and CO2 sensors for automatic speed-by-demand",
+            "Thin low-profile single-layer PCB outline, simple integration into tight blower shell spaces"
+          ],
+          specs: [
+            { label: "Input Voltage", value: "AC 110V / 220V 50Hz" },
+            { label: "Rated Power", value: "30W - 250W" },
+            { label: "Airflow Control Accuracy", value: "Target airflow offset < 3%" },
+            { label: "Ambient Temp Range", value: "-25°C to +60°C (Anti-humidity protective coating)" },
+            { label: "Certifications", value: "Designed to meet CCC standard and Class B appliance EMC" }
+          ],
+          applications: [
+            "Fresh-air ventilation systems & indoor air ducts",
+            "Hotel / Office building fan-coil auxiliary blowers",
+            "Smart ultra-silent kitchen exhaust fans",
+            "High-rise residential anti-backdraft air duct systems"
+          ]
+        },
+        {
+          id: "handheld-vacuum",
+          name: "Handheld Vacuum Cleaner Solution",
+          desc: "Highly integrated brushless motor controller for cordless high-vacuum hand held dust catchers. Millisecond fast ramp-up startup, maximum energy-saving vector control to extend batterylife.",
+          imgUrl: "https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=600&q=80",
+          features: [
+            "Instant ramp-up to 100,000 RPM top speed in just 0.2 seconds",
+            "Dynamic load adaptation with constant torque limit prevents unexpected stalls",
+            "Support wide range of battery stack voltage inputs, minimalistic high-efficiency SMD bill of materials",
+            "High power density in an extremely compact layout fitting perfectly inside gun handles"
+          ],
+          specs: [
+            { label: "Input Voltage", value: "DC 12V - 30V (Directly fed from 3S-8S lithium battery packs)" },
+            { label: "Rated Power", value: "100W - 350W (Max suction FOC)" },
+            { label: "Maximum Drive RPM", value: "Up to 110,000 RPM closed loop" },
+            { label: "Total Efficiency", value: "Motor system maximum efficiency gets to 90%" },
+            { label: "Safety System", value: "Single-cell overtemperature monitoring, hardware overcurrent trip" }
+          ],
+          applications: [
+            "Portable cordless dust and bed mites remover",
+            "Powerful wireless handheld vacuum cleaners",
+            "Automotive compact powerful handheld vacuums",
+            "High-end micro electronic dust blowout blowers"
+          ]
+        },
+        {
+          id: "robot-vacuum",
+          name: "Robot Sweep and Vacuum Solution",
+          desc: "All-in-one companion driving suction turbine, main sweep brush, and dual wheels. High low-speed torque and intelligent stall/stuck extraction logic makes it navigate gracefully.",
+          imgUrl: "https://images.unsplash.com/photo-1518063319789-7217e6706b04?auto=format&fit=crop&w=600&q=80",
+          features: [
+            "Provides unified drive system handling suction, roll brushes, side sweeps and dual wheels",
+            "Smart anti-entanglement, wheel stall extraction boosts torque when crossing thick carpets",
+            "Deep sleep low standby current consumption (< 15μA) maximizes battery storage shelf-life",
+            "Protective isolation borders, dust-resistant, waterproof and anti-oxidation coating on PCB"
+          ],
+          specs: [
+            { label: "Operating Voltage", value: "DC 14.4V - 16.8V (Suits multiple battery pack types)" },
+            { label: "Power Ratings", value: "Suction Fan 30W + Main Brush 45W + Wheels 20W×2" },
+            { label: "Bus Communication", value: "Hardware I2C / SPI linkages for immediate sensors coordinate" },
+            { label: "Standby Current", value: "≤ 12uA ultra standby saving" },
+            { label: "Operating Temp Range", value: "-10°C to +55°C" }
+          ],
+          applications: [
+            "Fully automated smart household robotic vac-and-mops",
+            "Commercial floor sweepers & industrial warehouse cleaners",
+            "Handheld active wash sweep wet-and-dry systems",
+            "Autonomous patrol track chassis platforms"
+          ]
+        },
+        {
+          id: "air-purifier",
+          name: "Air Purifier Drive Solution",
+          desc: "Engineered for an absolutely silent environment. Supports smart dust sensor and indoor air particulates load feedback loop. Keeps sound footprint incredibly low.",
+          imgUrl: "https://images.unsplash.com/photo-1626270119854-c9da2c59a72d?auto=format&fit=crop&w=600&q=80",
+          features: [
+            "Inaudible 25dB(A) minimum nocturnal operation, suppressing all high-frequency motor noise",
+            "Smart system identifies pressure delta when filter is clogged and automatically increments RPM",
+            "Seamless transition speed acceleration avoids acoustic jumps inside silent bedrooms",
+            "Direct interface to smart infrared and laser PM2.5 tracking modules"
+          ],
+          specs: [
+            { label: "Input Voltage", value: "AC 100V - 240V Universal input" },
+            { label: "Rated Power", value: "15W - 75W (Ultra high energy score ratio)" },
+            { label: "Airflow Advantage", value: "Fan efficiency increased by 12%, power consumed decreased by 20%" },
+            { label: "Speed Control Range", value: "50 RPM - 2200 RPM continuous non-stepped control" },
+            { label: "Standby Power Draw", value: "< 0.3W complying with Energy Star Tier 6 constraints" }
+          ],
+          applications: [
+            "Smart domestic air purifiers",
+            "Medium to large ventilational humidifiers and filter units",
+            "Bedroom bedside anti-formaldehyde smart fans",
+            "Clinical isolation cabin air disinfection containers"
+          ]
+        },
+        {
+          id: "server-fan",
+          name: "Server Cooling Fan Solution",
+          desc: "High-rpm redundant design for server and data rooms. High air pressure, real-time digital telemetries diagnostic, and robust environmental resilience.",
+          imgUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80",
+          features: [
+            "Supports on-the-fly Hot-Swap protection, limits initial current surges",
+            "SMBus / PMBus interface reporting speed, current and alarm flags in realtime",
+            "Cold-start thermal management and smooth rotational speed transition to prevent vibration resonance",
+            "Industrial military-grade components tolerating 85°C high-temperature under constant load"
+          ],
+          specs: [
+            { label: "Input Voltage", value: "DC 12V / 48V (Dual options)" },
+            { label: "Maximum Power", value: "Capable of routing up to 120W (High-power server modules)" },
+            { label: "Interface Standard", value: "Digital I2C / SMBus / PMBus smart monitoring" },
+            { label: "Expected Lifespan", value: "MTTF  150,000 Hours continuous 24/7 load" },
+            { label: "Compliance Standard", value: "Certified with heavy industrial industrial level CE/FCC EMC" }
+          ],
+          applications: [
+            "Data centers and cloud compute nodes rack chassis 4U / 2U cooling",
+            "Supercomputer units heavy-discharge airflow extraction",
+            "5G Macro base station waterproof high temperature housing ventilation",
+            "Premium frequency inverters & professional welders forced cold wind supply"
+          ]
+        }
       ]
     },
     contact: {

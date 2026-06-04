@@ -40,7 +40,7 @@ const Hero: React.FC<HeroProps> = ({ content }) => {
       </div>
 
       {/* Decorative Bottom Fade */}
-      <div className="absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t from-white to-transparent z-20"></div>
+      {/* <div className="absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t from-white to-transparent z-20"></div> */}
     </section>
   );
 };

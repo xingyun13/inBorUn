@@ -3,10 +3,11 @@ export type Language = 'zh' | 'en';
 export interface NavContent {
   logoMain: string;     // e.g. "INBORUN" or "英倍朗"
   logoHighlight: string; // e.g. "TECH" or "科技"
+  logo: string; // e.g. "https://aisearch.cdn.bcebos.com/pic_create/2026-06-04/13/096ef13e4874f634.jpg"
   home: string;
   about: string;
   solutions: string;
-  partners: string;
+  products: string;
   contact: string;
 }
 
@@ -79,15 +80,30 @@ export interface SolutionsContent {
   categories: SolutionItem[];
 }
 
-export interface PartnerItem {
-  name: string;
-  imgUrl: string;
+export interface ProductSpec {
+  label: string;
+  value: string;
 }
 
-export interface PartnersContent {
+export interface ProductItem {
+  id: string;
+  name: string;
+  desc: string;
+  imgUrl: string;
+  features: string[];
+  specs: ProductSpec[];
+  applications: string[];
+}
+
+export interface ProductsContent {
   title: string;
   subtitle: string;
-  list: PartnerItem[];
+  list: ProductItem[];
+  viewDetailText: string;
+  keyFeaturesText: string;
+  techSpecsText: string;
+  typicalAppsText: string;
+  backButton: string;
 }
 
 export interface ContactDetails {
@@ -116,7 +132,7 @@ export interface Content {
   hero: HeroContent;
   about: AboutContent;
   solutions: SolutionsContent;
-  partners: PartnersContent;
+  products: ProductsContent;
   contact: ContactContent;
   footer: FooterContent;
   solutionDetails: Record<string, SolutionDetail>;

@@ -3,7 +3,8 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Solutions from './components/Solutions';
-import Partners from './components/Partners';
+import Products from './components/Products';
+import ProductDetail from './components/ProductDetail';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import SolutionDetail from './components/SolutionDetail';
@@ -47,9 +48,15 @@ const App: React.FC = () => {
             <Hero content={content.hero} />
             <About content={content.about} />
             <Solutions content={content.solutions} onViewDetail={handleViewDetail} />
-            <Partners content={content.partners} />
+            <Products content={content.products} onViewProduct={(id) => setCurrentView(`product-${id}`)} />
             <Contact content={content.contact} />
           </>
+        ) : currentView.startsWith('product-') ? (
+          <ProductDetail 
+            productId={currentView.replace('product-', '')}
+            content={content.products}
+            onBack={() => setCurrentView('home')}
+          />
         ) : (
           <SolutionDetail 
             type={currentView} // Pass raw ID string directly

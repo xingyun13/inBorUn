@@ -1,6 +1,6 @@
 import React from 'react';
 import { AboutContent } from '../types';
-import { CheckCircle2 } from 'lucide-react';
+import { CheckCircle2, Cpu } from 'lucide-react';
 
 interface AboutProps {
   content: AboutContent;
@@ -25,19 +25,10 @@ const About: React.FC<AboutProps> = ({ content }) => {
           </div>
           <div className="relative rounded-2xl overflow-hidden shadow-lg">
             <img 
-              src="https://inborun-x-com.img.addlink.cn/images/aibimg.jpg" 
+              src="https://aisearch.cdn.bcebos.com/pic_create/2026-06-04/13/096ef13e4874f634.jpg" 
               alt="Engineering Lab" 
               className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
             />
-            {/* <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent flex items-end p-8">
-              <div className="text-white">
-                <div className="flex items-center space-x-2 mb-2">
-                  <Cpu className="text-tech-400" />
-                  <span className="font-bold text-xl">10+ Years Experience</span>
-                </div>
-                <p className="text-slate-200">Deep Electronics Industry Expertise</p>
-              </div>
-            </div> */}
           </div>
         </div>
 
