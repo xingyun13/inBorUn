@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Globe, Cpu } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
 import { Language, NavContent } from '../types';
 const logo = new URL('../images/logo.jpg', import.meta.url).href;
 interface NavbarProps {

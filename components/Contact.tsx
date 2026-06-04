@@ -1,6 +1,6 @@
 import React from 'react';
 import { ContactContent } from '../types';
-import { MapPin, Phone, User, QrCode } from 'lucide-react';
+import { MapPin, Phone, User } from 'lucide-react';
   const wx = new URL('../images/wx.png', import.meta.url).href;
 interface ContactProps {
   content: ContactContent;

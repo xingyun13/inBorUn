@@ -1,6 +1,6 @@
 import React from 'react';
 import { AboutContent } from '../types';
-import { CheckCircle2, Cpu } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 
 interface AboutProps {
   content: AboutContent;
