@@ -226,7 +226,7 @@ export const CONTENT: Record<Language, Content> = {
       home: "首页",
       about: "关于我们",
       solutions: "解决方案",
-      products: "产品方案",
+      products: "产品中心",
       contact: "联系方式"
     },
     hero: {

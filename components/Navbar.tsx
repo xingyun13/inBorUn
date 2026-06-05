@@ -32,7 +32,7 @@ const Navbar: React.FC<NavbarProps> = ({ lang, setLang, content, onNavClick }) =
   };
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-md py-4' : 'bg-transparent py-6'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white backdrop-blur-md shadow-md py-4' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
@@ -42,9 +42,9 @@ const Navbar: React.FC<NavbarProps> = ({ lang, setLang, content, onNavClick }) =
               alt="Engineering Lab"
               style={{ height: '60px',width:'220px',marginRight:'10px' }}
             />
-            <span className={`text-xl font-bold tracking-tight ${scrolled ? 'text-slate-900' : 'text-red-500'}`}>
+            {/* <span className={`text-xl font-bold tracking-tight ${scrolled ? 'text-slate-900' : 'text-red-500'}`}>
               {content.logoMain} <span className="text-tech-500">{content.logoHighlight}</span>
-            </span>
+            </span> */}
           </div>
 
           {/* Desktop Menu */}
